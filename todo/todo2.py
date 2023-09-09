@@ -41,6 +41,8 @@ while True:
     elif choice == 3:
         time.sleep(1)
         showTasks()
-    else:
+    elif choice == 4:
         print('Thanks for using us. See ya later!')
         break
+    else:
+        print("Invalid choice")
