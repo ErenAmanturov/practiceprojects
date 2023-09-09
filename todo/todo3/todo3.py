@@ -34,7 +34,6 @@ def deleteTask(task:int):
                 old_id = row[0]
                 if new_id != old_id:
                     db.execute("UPDATE tasks SET id = ? WHERE id = ?", (new_id, old_id))
-
             con.commit()
             time.sleep(1)
             print('Task deleted')
