@@ -15,8 +15,8 @@ class Items(object):
     """
 
     x=os.getcwd()
-    FILE_LOCATION = fr"{x}\todo.txt"
-    Done_Location= fr"{x}\done.txt"
+    FILE_LOCATION = fr"{x}/todo.txt"
+    Done_Location= fr"{x}/done.txt"
 
 
     def __init__(self):
