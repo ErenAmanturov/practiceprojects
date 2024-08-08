@@ -1,8 +1,19 @@
 import sqlite3
 import time
+import os
 
 
-con = sqlite3.connect('todo.db')
+file_name = 'todo.db'
+PATH = os.getcwd()
+
+for root, dirs, files in os.walk(PATH):
+    if file_name in files:
+        file_path = os.path.join(root, file_name)
+        break
+else:
+    print("file not found")
+
+con = sqlite3.connect(file_path)
 db = con.cursor()
 db.execute('CREATE TABLE IF NOT EXISTS tasks(id integer PRIMARY KEY AUTOINCREMENT, task text NOT NULL);')
     
